@@ -1,0 +1,30 @@
+# Explore taxonomy with R :
+
+- install kraken-biom with conda
+ 
+$ conda install -c bioconda kraken-biom
+$ kraken-biom out_kraken2_*.report --fmt json -o cuatroc_file.biom
+
+- Install packege R : 
+
+
+> if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+> BiocManager::install("phyloseq") # Install phyloseq
+> install.packages(c("RColorBrewer", "patchwork")) #install patchwork to chart publication-quality plots and readr to read rectangular datasets.
+
+- Load library: 
+
+> library("phyloseq")
+> library("ggplot2")
+> library("RColorBrewer")
+> library("patchwork")
+
+> setwd("~/my_folder/")
+> merged_metagenomes <- import_biom("cuatroc.biom")
+> class(merged_metagenomes)
+> View(merged_metagenomes@tax_table@.Data)
+> merged_metagenomes@tax_table@.Data <- substring(merged_metagenomes@tax_table@.Data, 4)
+> colnames(merged_metagenomes@tax_table@.Data)<- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
+
+
