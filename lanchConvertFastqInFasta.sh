@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#SBATCH --job-name=chimb_cov
+#SBATCH --job-name=cat_convert
 #SBATCH --cpus-per-task=20
 #SBATCH --mem=20GB
 #SBATCH --time=1-00:00:00  ## 3 j
 #SBATCH --partition=fast
-#SBATCH -o /shared/projects/virome_human_apes/virome_analysis/slurm_convert_cat_chimp.%N.%j.out
-#SBATCH -e /shared/projects/virome_human_apes/virome_analysis/slurm_convert_cat_chimp.%N.%j.err
+#SBATCH -o ../slurm_convert_cat_chimp.%N.%j.out
+#SBATCH -e ../slurm_convert_cat_chimp.%N.%j.err
 #SBATCH -A virome_human_apes
 
 

@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#SBATCH --job-name=hum_data_lg
+#SBATCH --job-name=parallel_blastn
 #SBATCH --cpus-per-task=28
 #SBATCH --mem=250GB
 #SBATCH --time=10-00:00:00  ## 3 j
 #SBATCH --partition=long
-#SBATCH -o /shared/projects/virome_human_apes/virome_analysis/hum_data/new_slurm_blastN_gori.%N.%j.out
-#SBATCH -e /shared/projects/virome_human_apes/virome_analysis/hum_data/new_slurm_blastN_gori.%N.%j.err
+#SBATCH -o ../new_slurm_blastN_gori.%N.%j.out
+#SBATCH -e ../new_slurm_blastN_gori.%N.%j.err
 #SBATCH -A virome_human_apes
 
 
@@ -39,8 +39,9 @@ do
  contigFasta=$(ls | grep -i *contigs\.fa)
  echo $contigFasta  
  OutBlastN=$(echo ${contigFasta} | sed 's/_out.contigs.fa/_blastn.txt/')
- #cat ${contigFasta} | parallel --block 100k --recstart '>' --pipe blastn -task megablast -evalue 10e-50 -db /shared/bank/nt/current/blast/nt -num_threads 1 -outfmt 6 -max_target_seqs 1 -max_hsps 1  > ${OutBlastN}
- blastn -task megablast -query ${contigFasta} -evalue 10e-50 -db /shared/bank/nt/current/blast/nt -num_threads 28 -outfmt "6 qseqid sseqid evalue pident bitscore staxids stitle" -max_target_seqs 1 -max_hsps 1 > ${OutBlastN}
+ cat ${contigFasta} | parallel --block 100k --recstart '>' --pipe blastn -task megablast -evalue 10e-50 -db /shared/bank/nt/current/blast/nt -num_threads 1 -outfmt 6 -max_target_seqs 1 -max_hsps 1  > ${OutBlastN}
+ #blastn -task megablast -query ${contigFasta} -evalue 10e-50 -db /shared/bank/nt/current/blast/nt -num_threads 28 -outfmt "6 qseqid sseqid evalue 
+pident bitscore staxids stitle" -max_target_seqs 1 -max_hsps 1 > ${OutBlastN}
  echo "blastN done"
  cd ../../
 done

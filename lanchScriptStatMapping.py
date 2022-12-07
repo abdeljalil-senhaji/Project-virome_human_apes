@@ -1,14 +1,11 @@
 #!/usr/bin/env python
+
+
 import pandas as pd
 import os
 
-
-
-
-
-
 df = pd.DataFrame()
-directory = '/shared/projects/virome_human_apes/virome_analysis/hum_data/stats_bam_samples/'
+directory = '../stats_bam_samples/'
 
 for stats_file in os.listdir(directory):
     file = open(directory + stats_file, 'r')

@@ -1,12 +1,20 @@
 #!/bin/bash
 
-#SBATCH --job-name=ech_hum
+
+
+#Abdeljalil v1.0.0
+#SLS 20/09/2022
+#CommandLine :
+#sbatch launchDedupTrimming.sh {folder}
+
+
+#SBATCH --job-name=preanalysis
 #SBATCH --cpus-per-task=28
 #SBATCH --mem=250GB
 #SBATCH --time=1-00:00:00  ## 3 j
 #SBATCH --partition=fast
-#SBATCH -o /shared/projects/virome_human_apes/virome_analysis/ech_hum/new_slurm_analysis.%N.%j.out
-#SBATCH -e /shared/projects/virome_human_apes/virome_analysis/ech_hum/new_slurm_analysis.%N.%j.err
+#SBATCH -o /new_slurm_analysis.%N.%j.out
+#SBATCH -e /new_slurm_analysis.%N.%j.err
 #SBATCH -A virome_human_apes
 
 
@@ -22,12 +30,12 @@ echo 'Directory:' $(pwd)
 echo '########################################'
 
 
-#Abdeljalil v1.0.0
-#SLS 20/09/2022
 
-#bash launchDedupTrimming.sh {folder}
+#load the tools : 
 module load bbmap
 module load trimmomatic
+
+
 
 folderInput=$1
 cd ${folderInput}
@@ -61,11 +69,19 @@ do
     rm ${dedupe1}
   fi
 done
-#source deactivate
 
 
+
+
+
+#unload the tools:
 module unload bbmap
 module unload trimmomatic
+
+
+
+
+
 
 echo '########################################'
 echo 'Job finished' $(date --iso-8601=seconds)

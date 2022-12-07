@@ -5,8 +5,8 @@
 #SBATCH --mem=250GB
 #SBATCH --time=1-00:00:00  ## 3 j
 #SBATCH --partition=fast
-#SBATCH -o /shared/projects/virome_human_apes/virome_analysis/hum5/kraken2_slurm_metaspades.%N.%j.out
-#SBATCH -e /shared/projects/virome_human_apes/virome_analysis/hum5/kraken2_slurm_metaspades.%N.%j.err
+#SBATCH -o ../kraken2_slurm.%N.%j.out
+#SBATCH -e ../kraken2_slurm.%N.%j.err
 #SBATCH -A virome_human_apes
 
 

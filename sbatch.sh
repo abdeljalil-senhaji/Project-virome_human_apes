@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#SBATCH --job-name=data_incomplet
+#SBATCH --job-name=metagenomic_analysis
 #SBATCH --cpus-per-task=28
 #SBATCH --mem=250GB
 #SBATCH --time=1-00:00:00  ## 3 j
 #SBATCH --partition=fast
-#SBATCH -o /shared/projects/virome_human_apes/virome_analysis/data_incompl/new_slurm_analysis.%N.%j.out
-#SBATCH -e /shared/projects/virome_human_apes/virome_analysis/data_incompl/new_slurm_analysis.%N.%j.err
+#SBATCH -o ../new_slurm_analysis.%N.%j.out
+#SBATCH -e ../new_slurm_analysis.%N.%j.err
 #SBATCH -A virome_human_apes
 
 
@@ -25,7 +25,7 @@ echo '########################################'
 ##script
 
 
-bash /shared/projects/virome_human_apes/virome_analysis/script_analysis/lanchDedupTrimming.sh /shared/projects/virome_human_apes/virome_analysis/data_incompl
+
 
 echo '########################################'
 echo 'Job finished' $(date --iso-8601=seconds)

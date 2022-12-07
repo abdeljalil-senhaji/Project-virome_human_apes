@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#SBATCH --job-name=blast_incompl
+#SBATCH --job-name=job_name
 #SBATCH --cpus-per-task=30
 #SBATCH --mem=250GB
 #SBATCH --time=1-00:00:00  ## 3 j
 #SBATCH --partition=fast
-#SBATCH -o /shared/projects/virome_human_apes/virome_analysis/data_incompl/slurm_metaspades.%N.%j.out
-#SBATCH -e /shared/projects/virome_human_apes/virome_analysis/data_incompl/slurm_metaspades.%N.%j.err
+#SBATCH -o ../slurm_blast.%N.%j.out
+#SBATCH -e ../slurm_blast.%N.%j.err
 #SBATCH -A virome_human_apes
 
 
@@ -22,7 +22,7 @@ echo 'Directory:' $(pwd)
 echo '########################################'
 
 
-##script
+
 
 module load blast 
 
@@ -46,3 +46,8 @@ done
 
 
 module unload blast 
+
+
+
+echo '########################################'
+echo 'Job finished' $(date --iso-8601=seconds)
