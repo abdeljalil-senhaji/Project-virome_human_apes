@@ -24,7 +24,7 @@ echo '########################################'
 
 
 
-module load blast 
+module load blast/2.12.0
 
 folderInput=$1
 
