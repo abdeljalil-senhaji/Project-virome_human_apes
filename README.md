@@ -20,8 +20,22 @@ This scripts can currently be run using either
 
 
  ## Installation
+ 
+With conda : 
+ trimmomatic/0.39
+ bbmap/39.00
+ bwa/0.7.17
+ seqtk/1.3
+ blast/2.12.0
+ megahit/1.2.9
+ kraken2/2.1.2 
+ spades/3.15.5
+With R : 
+ library("phyloseq")
+ library("ggplot2")
+ library("RColorBrewer")
+ library("patchwork")
 
-[Installation instructions for the project]
 
 ## Usage
 
