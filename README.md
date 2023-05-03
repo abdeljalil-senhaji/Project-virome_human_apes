@@ -1,6 +1,9 @@
+=============================================================================================
 # Project-virome_human_apes
+=============================================================================================
 
-
+ [![Documentation](https://img.shields.io/badge/Documentation-github-brightgreen.svg?style=for-the-badge)](https://github.com/abdeljalil-senhaji/Project-virome_human_apes)
+ [![DOI](https://zenodo.org/badge/572480371.svg)](https://zenodo.org/badge/latestdoi/572480371)
  
 
  
@@ -30,3 +33,8 @@ This scripts can currently be run using either
 sbatsh script.sh {folder_input}
 
 ```
+
+
+## Who is maintaining this repository ?
+
+- Abdeljalil SENHAJI RACHIK [senhajirachikabdeljalil@gmail.com](senhajirachikabdeljalil@gmail.com)
