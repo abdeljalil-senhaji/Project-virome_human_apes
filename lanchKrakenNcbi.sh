@@ -23,7 +23,7 @@ echo '########################################'
 
 ##script
 
-module load kraken2/
+module load kraken2/2.1.2 
 
 folderinput=$1
 paired=$2
