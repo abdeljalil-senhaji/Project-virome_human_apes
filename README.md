@@ -12,8 +12,7 @@
 
 This is a set of simple scripts for metagenomic analysis from miseq data to obtain analyzable results.
 
-lansh by slurm compute clusters.
-
+Lansh by slurm compute clusters.
 
 This scripts can currently be run using either
 
