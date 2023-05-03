@@ -14,15 +14,17 @@ This is a set of simple scripts for metagenomic analysis from miseq data to obta
 
 lansh by slurm compute clusters.
 
- 
 
 This scripts can currently be run using either
 
 [Slurm](https://slurm.schedmd.com/)
 
- 
 
-##To use scripts:
+ ## Installation
+
+[Installation instructions for the project]
+
+## Usage
 
  
 
@@ -31,8 +33,10 @@ This scripts can currently be run using either
 sbatsh script.sh {folder_input}
 
 ```
+## License
 
+This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
 
-## Who is maintaining this repository ?
+## Contact
 
-- Abdeljalil SENHAJI RACHIK [senhajirachikabdeljalil@gmail.com](senhajirachikabdeljalil@gmail.com)
+If you have any questions or comments about this project, you can reach us at [senhajirachikabdeljalil@gmail.com]
