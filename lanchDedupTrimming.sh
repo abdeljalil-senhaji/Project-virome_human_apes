@@ -32,8 +32,8 @@ echo '########################################'
 
 
 #load the tools : 
-module load bbmap
-module load trimmomatic
+module load bbmap/39.00
+module load trimmomatic/0.39
 
 
 
