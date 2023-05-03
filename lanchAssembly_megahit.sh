@@ -26,7 +26,7 @@ echo '########################################'
 ##script
 
 #source activate spades_3.15.5
-module load megahit
+module load megahit/1.2.9
 
 folderInput="/shared/projects/virome_human_apes/virome_analysis/data_incompl/done_incompl/"
 #refGenome="/data/virome_analysis/chimb_data/ref_genome"
@@ -61,7 +61,7 @@ do
 done
 #source deactivate
 
-module unload megahit
+module unload megahit/1.2.9
 
 
 echo '########################################'
