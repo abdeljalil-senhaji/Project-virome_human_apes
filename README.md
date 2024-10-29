@@ -4,7 +4,9 @@
  [![DOI](https://zenodo.org/badge/572480371.svg)](https://zenodo.org/badge/latestdoi/572480371)
  
 
- 
+ This project was published in Nature:
+ Higher convergence of human-great ape enteric eukaryotic viromes in central African forest than in a European zoo: a One Health analysis
+ https://doi.org/10.1038/s41467-023-39455-9
 
 ## Introduction
 
